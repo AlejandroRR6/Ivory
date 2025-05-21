@@ -33,12 +33,14 @@ public class RegistroClienteUI extends JDialog{
         JTextField txtDireccion = new JTextField();
 
         JButton btnRegistrar = new JButton("Registrar");
+        JButton btnCancelar = new JButton("Cancelar");
 
         add(lblId); add(txtId);
         add(lblNombre); add(txtNombre);
         add(lblTelefono); add(txtTelefono);
         add(lblDireccion); add(txtDireccion);
         add(new JLabel()); add(btnRegistrar);
+        add(btnCancelar);
 
         btnRegistrar.addActionListener(e -> {
             try {
