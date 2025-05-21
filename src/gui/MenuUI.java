@@ -1,12 +1,7 @@
 package gui;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.SwingConstants;
-import javax.swing.SwingUtilities;
-import java.awt.GridLayout;
+import javax.swing.*;
+import java.awt.*;
 
 public class MenuUI extends JFrame {
     public MenuUI() {
@@ -37,7 +32,11 @@ public class MenuUI extends JFrame {
         clienteBtn.addActionListener(e -> {
             new LoginClienteUI().setVisible(true);
         });
-        // manicuristaBtn.addActionListener(e -> new LoginManicuristaUI());
+
+        manicuristaBtn.addActionListener(e -> {
+            new LoginManicuristaUI().setVisible(true);
+        });
+
         salirBtn.addActionListener(e -> System.exit(0));
 
         setVisible(true);
@@ -47,3 +46,4 @@ public class MenuUI extends JFrame {
         SwingUtilities.invokeLater(() -> new MenuUI());
     }
 }
+
