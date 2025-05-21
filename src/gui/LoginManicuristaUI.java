@@ -22,7 +22,11 @@ public class LoginManicuristaUI extends JFrame {
         add(panel);
 
         JButton btnLogin = new JButton("Ingresar");
+        JButton btnVolver = new JButton("Volver al Menú");
+
         add(btnLogin);
+        add(btnVolver);
+
 
         btnLogin.addActionListener(e -> {
             try {
@@ -51,6 +55,13 @@ public class LoginManicuristaUI extends JFrame {
             } catch (NumberFormatException ex) {
                 JOptionPane.showMessageDialog(this, "El ID debe ser un número válido.");
             }
+        });
+
+        // Acción de "Volver al Menú"
+        btnVolver.addActionListener(e -> {
+            dispose(); // cerrar esta ventana
+            new MenuUI(); // volver al menú principal
+            
         });
     }
 }
